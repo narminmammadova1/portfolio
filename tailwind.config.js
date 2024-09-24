@@ -22,12 +22,11 @@ module.exports = {
     extend: {
       dropShadow:{
         'custom': '4px -6px 5px #923284',
-        // 'custom2': '4px -4px 10px 10px #923284', 
       },
       boxShadow:{
         // shadowCustom:'0px 10px 20px #923284',
       //  shadowCustom:"0 -6px 12px #923284",
-       shadowCustom: '0 4px 32px rgba(146, 50, 132, 0.6)', // Mor renk
+       shadowCustom: '0 4px 32px rgba(146, 50, 132, 0.6)', 
 
       },
       colors:{
