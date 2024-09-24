@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import Head from "next/head";
 // import { Head, Main } from "next/document";
 import About from "@/Components/About";
@@ -11,7 +10,6 @@ import Header from "@/Components/Header";
 import { FaArrowUp } from "react-icons/fa";
 import Certificates from "@/Components/Certificates";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
