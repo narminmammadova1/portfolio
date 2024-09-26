@@ -6,7 +6,7 @@ import { TbBrandFiverr } from "react-icons/tb";
 const Contact = () => {
   return (
     <div>
-       <section id="contact" className='mt-40 '>
+       <section id="contact" className=' '>
        <h1 className=' text-center text-purplemain drop-shadow-custom '>Contact Me</h1>
 <div className='flex mt-10'>
     <div className="flex-1 flex-col p-6">

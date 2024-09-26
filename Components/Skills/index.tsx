@@ -6,7 +6,7 @@ import { SiTypescript } from "react-icons/si";
 const Skills = () => {
   return (
     <div>
-   <section id="skills" className="mt-40 text-white">
+   <section id="skills" className=" text-white">
     <div className=" ">
     <h1 className="text-purplemain drop-shadow-custom text-center">My Skills</h1>
     <div className=" skillsDiv mt-10  flex flex-wrap justify-around">

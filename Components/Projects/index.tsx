@@ -1,18 +1,38 @@
+import { useAnimatedStyles } from '@/hooks/useAnimated'
 import Image from 'next/image'
 import React from 'react'
-
+import {animated} from "react-spring"
 const Projects = () => {
+
+const projectsData=[{
+  id:1,
+  image:"/logo.svg" ,
+  link:"https://foody-app-pearl.vercel.app/"
+},
+{
+  id:2,
+  image:"/getgifs4.jpg",
+  link:"https://narminmammadova1.github.io/getGif/"
+},
+{
+  id:3,
+  image:"/Lemonlogo.svg",
+  link:"https://little-lemon-two-blush.vercel.app/"
+}
+]
+
+
+const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
+
+
   return (
     <div>
-       <section id="projects" className=" mt-40">
+       <section id="projects" className=" ">
     <div className=" ">
       <h1 className="text-purplemain drop-shadow-custom text-center">My Projects</h1>
-      {/* <p>Lorem ipsum dolor sit amet, 
-        consectetur adipisicing elit. Quos, sed expedita! Quasi vitae porro nobis aliquam doloribus animi? 
-        Rem ab consequatur, quasi sunt */}
-         {/* molestias temporibus laboriosam alias delectus voluptatum omnis.</p> */}
+    
          <div className="flex gap-10 mt-10  justify-around">
-         <div className="px-4 w-1/3  relative h-[250px] flex-col justify-between rounded-lg bg-slate-200 overflow-hidden">
+         {/* <div className="px-4 w-1/3  relative h-[250px] flex-col justify-between rounded-lg bg-slate-200 overflow-hidden">
         
          <Image src="/logo.svg" width={250} 
           height={200} alt="" 
@@ -50,7 +70,32 @@ const Projects = () => {
           <button className='px-6 text-white absolute bottom-2 bg-purplemain rounded-md'>view</button>
           </a>
          
-         </div>
+         </div> */}
+
+{projectsData.map((project)=>(
+   <animated.div style={getSpringStyles(project.id)} className=" w-1/3 border-none  relative h-[250px] flex-col justify-between rounded-lg overflow-hidden"
+   
+   onMouseEnter={()=>setHoveredId(project.id)}
+   onMouseLeave={()=>setHoveredId(null)}
+   >
+        
+         <Image src={project.image} width={250} 
+          height={200} alt="" 
+          // objectFit='cover'
+          className='  min-w-full  h-[250px]'/>
+       
+          <a href={project.link} target='_blank' rel='noopener norefferer'>
+          {hoveredId===project.id && (          <button className='px-6 m-4 text-white absolute bottom-2 bg-purplemain rounded-md'>view</button>
+)}
+          </a>
+         
+         </animated.div>
+
+
+
+))}
+
+
 
          </div>
     </div>
