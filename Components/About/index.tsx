@@ -1,27 +1,28 @@
 import { useAnimatedStyles } from '@/hooks/useAnimated';
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next';
 import { animated } from 'react-spring';
 
 const About = () => {
   const { ColorChangeText} = useAnimatedStyles();
 
+  const {t,i18n}=useTranslation()
 
 
+  useEffect(() => {
+    const storedLang = localStorage.getItem('language');
+    if (storedLang) {
+      i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+    }
+  }, [i18n]);
   return (
     <div>
   <section id="about" className="flex  ">
     <div className="text-white w-1/2 ">
-      <animated.h1 style={ColorChangeText} className=" drop-shadow-custom">I AM A WEB  DEVELOPER</animated.h1>
-      <p className=' text-[18px]' >Hi! I'm <strong className='text-purplemain'>Narmin</strong> and I have been involved in web design and 
-        development for the past two years. During this time, 
-        I have focused on creating user-friendly and visually
-         appealing websites that are compatible with both mobile
-          and desktop platforms.
-
-I take responsibility in my work and strive to complete projects on time.
- Customer satisfaction is always my top priority.
-  You can explore my portfolio and CV to get a better idea of my work.
+      <animated.h1 style={ColorChangeText} className=" drop-shadow-custom">{t("I AM A WEB  DEVELOPER")}</animated.h1>
+      <p className=' text-[18px]' >{t("Hi! I'm ")}<strong className='text-purplemain'>{t(" Narmin.")}</strong> 
+     {t("I have been involved in web design and development for the past two years.During this time,I have focused on creating user-friendly and visually appealing websites that are compatible with both mobile and desktop platforms.I take responsibility in my work and strive to complete projects on time.Customer satisfaction is always my top priority.You can explore my portfolio and CV to get a better idea of my work.")}
 
 </p>
           <div className="flex gap-6 items-center">
@@ -32,7 +33,7 @@ I take responsibility in my work and strive to complete projects on time.
             >
             <button 
             
-            className="rounded-xl px-3 py-2 mt-10 bg-purplemain">Download CV</button>
+            className="rounded-xl  w-28  py-2 mt-10 border-2  border-purplemain">{t("Download CV")}</button>
 
             </a>
 
@@ -44,7 +45,7 @@ I take responsibility in my work and strive to complete projects on time.
             >
             <button 
             
-            className="rounded-xl px-8 py-2 mt-10 bg-purplemain">View CV</button>
+            className="rounded-xl  w-28 py-2 mt-10 border-2  border-purplemain">{t("View CV")}</button>
 
             </a>
             

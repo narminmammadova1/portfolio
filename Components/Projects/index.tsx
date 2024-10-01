@@ -1,8 +1,17 @@
 import { useAnimatedStyles } from '@/hooks/useAnimated'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import {animated} from "react-spring"
 const Projects = () => {
+const {t,i18n}=useTranslation()
+
+useEffect(() => {
+  const storedLang = localStorage.getItem('language');
+  if (storedLang) {
+    i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+  }
+}, [i18n]);
 
 const projectsData=[{
   id:1,
@@ -29,51 +38,12 @@ const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
     <div>
        <section id="projects" className=" ">
     <div className=" ">
-      <h1 className="text-purplemain drop-shadow-custom text-center">My Projects</h1>
+      <h1 className="text-purplemain drop-shadow-custom text-center">{t("My Projects")}</h1>
     
          <div className="flex gap-10 mt-10  justify-around">
-         {/* <div className="px-4 w-1/3  relative h-[250px] flex-col justify-between rounded-lg bg-slate-200 overflow-hidden">
-        
-         <Image src="/logo.svg" width={250} 
-          height={200} alt="" 
-          // objectFit='cover'
-          className='  min-w-full  h-[250px]'/>
-       
-          <a href="https://foody-app-pearl.vercel.app/" target='_blank' rel='noopener norefferer'>
-          
-          <button className='px-6 text-white absolute bottom-2 bg-purplemain rounded-md'>view</button>
-          </a>
-         
-         </div>
-         <div className=" w-1/3  relative h-[250px] flex-col justify-between rounded-lg bg-slate-200 overflow-hidden">
-        
-        <Image src="/getgifs4.jpg" width={250} 
-         height={200} alt="" 
-         // objectFit='cover'
-         className='  min-w-full  h-[250px]'/>
       
-         <a href="https://narminmammadova1.github.io/getGif/" target='_blank' rel='noopener norefferer'>
-         
-         <button className='px-6 mx-6 text-white absolute bottom-2 bg-purplemain rounded-md'>view</button>
-         </a>
-        
-        </div>
-        <div className="px-4 w-1/3  relative h-[250px] flex-col justify-between rounded-lg bg-slate-200 overflow-hidden">
-        
-         <Image src="/Lemonlogo.svg" width={250} 
-          height={200} alt="" 
-          // objectFit='cover'
-          className='  min-w-full  h-[250px]'/>
-       
-          <a href="https://little-lemon-two-blush.vercel.app/" target='_blank' rel='noopener norefferer'>
-          
-          <button className='px-6 text-white absolute bottom-2 bg-purplemain rounded-md'>view</button>
-          </a>
-         
-         </div> */}
-
 {projectsData.map((project)=>(
-   <animated.div style={getSpringStyles(project.id)} className=" w-1/3 border-none  relative h-[250px] flex-col justify-between rounded-lg overflow-hidden"
+   <animated.div key={project.id} style={getSpringStyles(project.id)} className=" w-1/3 border-none  relative h-[250px] flex-col justify-between rounded-lg overflow-hidden"
    
    onMouseEnter={()=>setHoveredId(project.id)}
    onMouseLeave={()=>setHoveredId(null)}
@@ -84,10 +54,10 @@ const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
           // objectFit='cover'
           className='  min-w-full  h-[250px]'/>
        
-          <a href={project.link} target='_blank' rel='noopener norefferer'>
-          {hoveredId===project.id && (          <button className='px-6 m-4 text-white absolute bottom-2 bg-purplemain rounded-md'>view</button>
+          
+          {hoveredId===project.id && (    <a href={project.link} target='_blank' rel='noopener norefferer'>      <button className='px-6 m-4 text-white absolute bottom-2  border-2 border-purplemain rounded-md'>{t("view")}</button>  </a>
 )}
-          </a>
+        
          
          </animated.div>
 

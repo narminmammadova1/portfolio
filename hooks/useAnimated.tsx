@@ -6,7 +6,7 @@ import { useSpring } from "react-spring";
 
 
 export const useAnimatedStyles = () => {
-  const [hoveredId, setHoveredId] = useState(null);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   const getSpringStyles = (id:number) => {
     const isHovered = hoveredId === id;
@@ -25,8 +25,8 @@ export const useAnimatedStyles = () => {
 
       },
       config: { duration: 2000 },
-      reset: true, // Tekrar tekrar animasyonu başlatmak için
-      loop: true, // Sürekli döngü için
+      reset: true, 
+      loop: true, 
     })
   
   

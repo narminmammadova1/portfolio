@@ -1,10 +1,12 @@
 
 
 import { useAnimatedStyles } from '@/hooks/useAnimated';
-import React from 'react';
+import { CertificateProps } from '@/interfaces';
+import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { animated } from 'react-spring';
 
-const certificatesData = [
+const certificatesData:CertificateProps[]= [
   {
     id: 1,
     title: 'Meta Fronted Developer Certificate',
@@ -29,26 +31,37 @@ const certificatesData = [
 
 const Certificates = () => {
   const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
+  const {t,i18n}=useTranslation()
+
+
+  useEffect(() => {
+    const storedLang = localStorage.getItem('language');
+    if (storedLang) {
+      i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+    }
+  }, [i18n]);
+
+
 
   return (
     <div>
       <section id="certificates" className="  ">
-        <h1 className='text-purplemain text-center drop-shadow-custom'>Certificates</h1>
+        <h1 className='text-purplemain text-center drop-shadow-custom'>{t("Certificates")}</h1>
 
         <div className="flex text-white justify-around mt-10">
           {certificatesData.map((certificate) => (
-            <a key={certificate.id} href={certificate.link} target="_blank" rel="noopener noreferrer">
-              <animated.div
+              <animated.div key={certificate.id}
                 style={getSpringStyles(certificate.id)}
                 className='card-front px-4 flex-col w-[200px] h-[100px] flex items-center cursor-pointer text-center py-2 shadow-shadowCustom rounded-md border-purplemain'
                 onMouseEnter={() => setHoveredId(certificate.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
                 <p>{certificate.title}</p>
-                {hoveredId===certificate.id &&( <button   className='px-4 border-2 border-purplemain rounded'>click</button>
+                {hoveredId===certificate.id &&(            <a key={certificate.id} href={certificate.link} target="_blank" rel="noopener noreferrer">
+                  <button   className='px-4 border-2 border-purplemain rounded'>{t("click")}</button>            </a>
+
 )}
               </animated.div>
-            </a>
           ))}
         </div>
       </section>

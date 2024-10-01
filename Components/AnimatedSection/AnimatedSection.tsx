@@ -1,8 +1,12 @@
+import { AnimatedSectionProps } from '@/interfaces'
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
 import { useSpring,animated } from 'react-spring'
 
-const AnimatedSection = ({children}) => {
+
+
+
+const AnimatedSection:React.FC<AnimatedSectionProps> = ({children}) => {
 
 const {ref,inView}=useInView({
     threshold: 0.1
