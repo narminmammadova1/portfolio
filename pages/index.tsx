@@ -10,7 +10,7 @@ import Header from "@/Components/Header";
 import { FaArrowUp } from "react-icons/fa";
 import Certificates from "@/Components/Certificates";
 import AnimatedSection from "@/Components/AnimatedSection/AnimatedSection";
- import "./i18n"
+ import "../utils/i18n"
 export default function Home() {
 
 

@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { useDropDown } from '@/hooks/useDropDown'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
-// import "../../pages/i18n"
 
 const Header = () => {
 const  {openLangDiv,closeLangDiv,isOpen}=useDropDown()
@@ -12,8 +11,8 @@ const {t,i18n}=useTranslation()
 
 const changeLanguage = (lang:string) => {
   i18n.changeLanguage(lang);
-  localStorage.setItem('language', lang); // Dili localStorage'da sakla
-  closeLangDiv(); // Dropdown'ı kapat
+  localStorage.setItem('language', lang); 
+  closeLangDiv(); 
 }
 
 
@@ -21,7 +20,7 @@ const changeLanguage = (lang:string) => {
 useEffect(() => {
   const storedLang = localStorage.getItem('language');
   if (storedLang) {
-    i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+    i18n.changeLanguage(storedLang); 
   }
 }, [i18n]);
 
@@ -35,7 +34,7 @@ useEffect(() => {
     <Image className="w-[300px]  "  width={200} height={200} src="/png/mn2.png" alt="logo"/>
     </div>
 
-    aktiv dil:{i18n.language}
+    {/* aktiv dil:{i18n.language} */}
      <nav className=' ' >
        <ul className="flex text-2xl gap-6 text-white">
        <li><a href="#about">{t(" About me")}</a>
