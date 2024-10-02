@@ -55,10 +55,11 @@ export default function Home() {
 
 </AnimatedSection>
 
-
+<AnimatedSection>
 <Contact/>
-<button className=" w-16 h-16 border border-purplemain  fixed  bottom-0 z-20 right-10 cursor-pointer rounded-full flex items-center justify-center shadow-shadowCustom">
-<a href="#header"><FaArrowUp className=" text-4xl text-purplemain" />
+</AnimatedSection>
+<button className="w-10 h-10 lg:w-16 lg:h-16 border border-purplemain  fixed  bottom-0 z-20 right-10 cursor-pointer rounded-full flex items-center justify-center shadow-shadowCustom">
+<a href="#header"><FaArrowUp className="text-2xl lg:text-4xl text-purplemain" />
 
 
 </a>

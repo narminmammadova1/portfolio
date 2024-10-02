@@ -92,3 +92,9 @@ li:hover{
 }
 
 
+@media (max-width:1024px){
+  section {
+    padding-top: 100px;  
+    padding-bottom: 20px; 
+  }
+}

@@ -48,11 +48,11 @@ const Certificates = () => {
       <section id="certificates" className="  ">
         <h1 className='text-purplemain text-center drop-shadow-custom'>{t("Certificates")}</h1>
 
-        <div className="flex text-white justify-around mt-10">
+        <div className="flex justify-center   text-white flex-wrap lg:justify-around   mt-10">
           {certificatesData.map((certificate) => (
               <animated.div key={certificate.id}
                 style={getSpringStyles(certificate.id)}
-                className='card-front px-4 flex-col w-[200px] h-[100px] flex items-center cursor-pointer text-center py-2 shadow-shadowCustom rounded-md border-purplemain'
+                className=' px-4 flex-col w-[80%] h-[80px] lg:w-[200px] lg:h-[100px] mb-10 lg:mb-0 flex items-center cursor-pointer text-center py-2 shadow-shadowCustom rounded-md border-purplemain'
                 onMouseEnter={() => setHoveredId(certificate.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >

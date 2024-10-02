@@ -13,19 +13,19 @@ const About = () => {
   useEffect(() => {
     const storedLang = localStorage.getItem('language');
     if (storedLang) {
-      i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+      i18n.changeLanguage(storedLang); 
     }
   }, [i18n]);
   return (
     <div>
-  <section id="about" className="flex  ">
-    <div className="text-white w-1/2 ">
+  <section id="about" className="flex flex-col-reverse  md:flex-row items-center  ">
+    <div className="text-white w-full text-center lg:text-start   md:w-1/2 ">
       <animated.h1 style={ColorChangeText} className=" drop-shadow-custom">{t("I AM A WEB  DEVELOPER")}</animated.h1>
       <p className=' text-[18px]' >{t("Hi! I'm ")}<strong className='text-purplemain'>{t(" Narmin.")}</strong> 
      {t("I have been involved in web design and development for the past two years.During this time,I have focused on creating user-friendly and visually appealing websites that are compatible with both mobile and desktop platforms.I take responsibility in my work and strive to complete projects on time.Customer satisfaction is always my top priority.You can explore my portfolio and CV to get a better idea of my work.")}
 
 </p>
-          <div className="flex gap-6 items-center">
+          <div className="flex gap-6 items-center justify-center lg:justify-start">
             <a href="/CV/Mammadova_Narmin_CV.pdf"
             download="Mammadova_Narmin_CV.pdf"
             
