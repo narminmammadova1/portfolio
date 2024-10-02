@@ -36,7 +36,7 @@ useEffect(() => {
 
     {/* aktiv dil:{i18n.language} */}
      <nav className=' ' >
-       <ul className="flex text-base md:text-lg lg:text-2xl gap-6 text-white">
+       <ul className="flex text-md md:text-2xl lg:text-2xl gap-2 md:gap-6 lg:gap-6 text-white">
        <li><a href="#about">{t(" About me")}</a>
        </li>
        <li><a href="#projects">{t("Projects")}</a></li>
@@ -46,12 +46,12 @@ useEffect(() => {
       </ul>
  </nav>
  <div>
-  <div className='right-14  absolute top-6 lg:top-16  items-center justify-center flex-col '>
+  <div className='right-3 md:right-8 lg:right-14 z-10 absolute top-6 lg:top-16  items-center justify-center flex-col '>
   <div onClick={openLangDiv} className='cursor-pointer self-center m-auto  w-6 h-6  '>
     <Image src={`/${i18n.language==="az" ? "az" :i18n.language==="ru" ? "ru" : "en" }.jpg`} className=' object-cover   rounded-full w-6 h-6'  width={200} height={200} alt="lang"/>
   </div>
 
-  {isOpen && ( <div className=' cursor-pointer  border-2 border-zinc-400 rounded-lg    flex-col   mt-1 '>
+  {isOpen && ( <div className=' cursor-pointer z-20  border-2 border-zinc-400 rounded-lg    flex-col   mt-1 '>
     <Image onClick={()=>changeLanguage("en")
  
    } 

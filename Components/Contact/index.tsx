@@ -1,12 +1,15 @@
+import { useAnimatedStyles } from '@/hooks/useAnimated';
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
 import { FaGithub,  FaInstagramSquare  } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
 import { TbBrandFiverr } from "react-icons/tb";
+import { animated } from 'react-spring';
 
 const Contact = () => {
 
   const {t,i18n}=useTranslation()
+  const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
 
 
   
@@ -44,7 +47,10 @@ useEffect(() => {
               </button>
               </a>
     </div>
-    <div className=' flex flex-col flex-1  shadow-shadowCustom rounded-lg'>
+    <animated.div style={getSpringStyles(1)} className=' flex flex-col flex-1  rounded-lg'
+    
+    onMouseEnter={() => setHoveredId(1)}
+    onMouseLeave={() => setHoveredId(null)}    >
       <form id="contactForm" action="https://formspree.io/f/xrbznwqr" method="POST" className='flex flex-col rounded-lg px-6 py-2'>
         <input type="text" name="First name" className=''  placeholder={t("First name")}  required/>
         <input type="text" name="Last name" placeholder={t("Last name")}  required />
@@ -56,7 +62,7 @@ useEffect(() => {
 <textarea  placeholder={t('Write message here')} name="message"   required id=""/>
 <button  id="formBtn" className='  bg-purplemain p-[15px]  rounded-full text-white font-medium text-2xl'>{t("Send Message")}</button>
       </form>
-    </div>
+    </animated.div>
     </div>
    </section>
     </div>

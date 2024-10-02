@@ -41,11 +41,12 @@ module.exports = {
       boxShadow:{
         // shadowCustom:'0px 10px 20px #923284',
       //  shadowCustom:"0 -6px 12px #923284",
-       shadowCustom: '0 4px 32px rgba(146, 50, 132, 0.6)', // Mor renk
-
+       shadowCustom: '0 4px 32px rgba(146, 50, 132, 0.6)', 
+blackShadow:'0px 20px 30px rgba(0, 0, 0, 0.2)'
       },
       colors:{
-        purplemain:"#923284"
+        purplemain:"#923284",
+
       },
       
     },

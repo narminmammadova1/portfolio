@@ -18,7 +18,7 @@ const About = () => {
   }, [i18n]);
   return (
     <div>
-  <section id="about" className="flex flex-col-reverse  md:flex-row items-center  ">
+  <section id="about" className="flex flex-col-reverse mt-4   md:flex-row items-center  ">
     <div className="text-white w-full text-center lg:text-start   md:w-1/2 ">
       <animated.h1 style={ColorChangeText} className=" drop-shadow-custom">{t("I AM A WEB  DEVELOPER")}</animated.h1>
       <p className=' text-[18px]' >{t("Hi! I'm ")}<strong className='text-purplemain'>{t(" Narmin.")}</strong> 

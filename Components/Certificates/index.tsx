@@ -55,7 +55,9 @@ const Certificates = () => {
                 className=' px-4 flex-col w-[80%] h-[80px] lg:w-[200px] lg:h-[100px] mb-10 lg:mb-0 flex items-center cursor-pointer text-center py-2 shadow-shadowCustom rounded-md border-purplemain'
                 onMouseEnter={() => setHoveredId(certificate.id)}
                 onMouseLeave={() => setHoveredId(null)}
-              >
+             
+             
+             >
                 <p>{certificate.title}</p>
                 {hoveredId===certificate.id &&(            <a key={certificate.id} href={certificate.link} target="_blank" rel="noopener noreferrer">
                   <button   className='px-4 border-2 border-purplemain rounded'>{t("click")}</button>            </a>
