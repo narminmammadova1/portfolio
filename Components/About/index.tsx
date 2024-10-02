@@ -26,8 +26,8 @@ const About = () => {
 
 </p>
           <div className="flex gap-6 items-center justify-center lg:justify-start">
-            <a href="/CV/Mammadova_Narmin_CV.pdf"
-            download="Mammadova_Narmin_CV.pdf"
+            <a href="/CV/Mammadova.Narmin_CV.pdf"
+            download="Mammadova.Narmin_CV.pdf"
             
             
             >
@@ -37,7 +37,7 @@ const About = () => {
 
             </a>
 
-            <a href="/CV/Mammadova_Narmin_CV.pdf"
+            <a href="/CV/Mammadova.Narmin_CV.pdf"
             target='_blank'
             rel='noopener norefferer'
 
