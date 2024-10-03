@@ -59,10 +59,12 @@ if(response.ok){
   toast.success(t("Thank you! We will get back to you soon."))
   console.log("successss");
   
-  e.currentTarget.reset()
-}
+  if (e.currentTarget) {
+    e.currentTarget.reset();
+  }}
 else{
-throw new Error("error")
+  const errorMessage = await response.text();
+  throw new Error(errorMessage || "Error");
 }
 }
 catch(err){console.log(err);
