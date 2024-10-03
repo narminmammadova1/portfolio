@@ -1,30 +1,40 @@
 import { useAnimatedStyles } from '@/hooks/useAnimated';
-import { log } from 'console';
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
-import { FaGithub,  FaInstagramSquare  } from "react-icons/fa";
+import { FaGithub,  } from "react-icons/fa";
 import { FaUpwork } from "react-icons/fa6";
 import { TbBrandFiverr } from "react-icons/tb";
 import { animated } from 'react-spring';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+
+
+
+
+interface FormElements extends HTMLFormControlsCollection {
+  firstName: HTMLInputElement;
+  lastName: HTMLInputElement;
+  email: HTMLInputElement;
+  phone: HTMLInputElement;
+  message: HTMLTextAreaElement;
+}
 
 const Contact = () => {
 
   const {t,i18n}=useTranslation()
-  const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
+  const { getSpringStyles, setHoveredId} = useAnimatedStyles();
 
 
   
 useEffect(() => {
   const storedLang = localStorage.getItem('language');
   if (storedLang) {
-    i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+    i18n.changeLanguage(storedLang); 
   }
 }, [i18n]);
 
-const handleSubmit=async (e:any)=>{
+const handleSubmit=async (e:React.FormEvent<HTMLFormElement>)=>{
   e.preventDefault()
-const formElements=e.target.elements
+  const formElements = e.currentTarget.elements as FormElements; 
 const formData={
   firstName: formElements.firstName.value,
   lastName: formElements.lastName.value,
@@ -49,13 +59,15 @@ if(response.ok){
   toast.success(t("Thank you! We will get back to you soon."))
   console.log("successss");
   
-  e.target.reset()
+  e.currentTarget.reset()
 }
 else{
 throw new Error("error")
 }
 }
-catch(error){toast.error(t("Error:Please try again later."))
+catch(err){console.log(err);
+
+  toast.error(t("Error:Please try again later."))
 }
 
 }

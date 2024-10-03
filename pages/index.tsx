@@ -11,7 +11,6 @@ import { FaArrowUp } from "react-icons/fa";
 import Certificates from "@/Components/Certificates";
 import AnimatedSection from "@/Components/AnimatedSection/AnimatedSection";
  import "../utils/i18n"
-import { ToastContainer } from "react-toastify";
 
 
 export default function Home() {
