@@ -11,6 +11,9 @@ import { FaArrowUp } from "react-icons/fa";
 import Certificates from "@/Components/Certificates";
 import AnimatedSection from "@/Components/AnimatedSection/AnimatedSection";
  import "../utils/i18n"
+import { ToastContainer } from "react-toastify";
+
+
 export default function Home() {
 
 
@@ -22,6 +25,7 @@ export default function Home() {
 <meta property="og:title"content="Nermin Memmedova" />
 <meta property="og:type" content="website"/>
     </Head>
+
    <main className="px-6">
     <div id="header">
   <Header/>

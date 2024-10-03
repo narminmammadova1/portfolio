@@ -36,7 +36,7 @@ useEffect(() => {
 
     {/* aktiv dil:{i18n.language} */}
      <nav className=' ' >
-       <ul className="flex text-md md:text-2xl lg:text-2xl gap-2 md:gap-6 lg:gap-6 text-white">
+       <ul className="flex text-sm md:text-2xl lg:text-2xl gap-2 md:gap-6 lg:gap-6 text-white">
        <li><a href="#about">{t(" About me")}</a>
        </li>
        <li><a href="#projects">{t("Projects")}</a></li>
