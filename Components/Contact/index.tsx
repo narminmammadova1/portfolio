@@ -22,7 +22,7 @@ useEffect(() => {
   }
 }, [i18n]);
 
-const handleSubmit=async (e)=>{
+const handleSubmit=async (e:any)=>{
   e.preventDefault()
 const formElements=e.target.elements
 const formData={
@@ -46,8 +46,8 @@ body:JSON.stringify(formData)
 
 
 if(response.ok){
-  toast.success(t("Thank you for your message! We will get back to you soon."))
-  console.log("yessssssssssssss");
+  toast.success(t("Thank you! We will get back to you soon."))
+  console.log("successss");
   
   e.target.reset()
 }
@@ -55,7 +55,7 @@ else{
 throw new Error("error")
 }
 }
-catch(error){toast.error(t("Error: Your message could not be sent. Please try again later."))
+catch(error){toast.error(t("Error:Please try again later."))
 }
 
 }

@@ -37,7 +37,9 @@ az:{
 "Satisfaction":"Məmnuniyyət",
 "Guarante":"Zəmanəti",
 "view":"bax",
-"click":"bax"
+"click":"bax",
+"Thank you! We will get back to you soon.":"Təşəkkürlər.Sizinlə Tezliklə əlaqə saxlanılacaq",
+"Error:Please try again later.":"Xəta:Yenidən cəhd edin"
 
         
      }
@@ -72,9 +74,10 @@ ru:{
      "Satisfaction":"Гарантия",
      "Satisfaction":"Yдовлетворения",
      "view": "Просмотр",
-     "click":"Нажмите"
+     "click":"Нажмите",
+     "Thank you! We will get back to you soon.":"Спасибо! Мы скоро с вами свяжемся.",
 
-    
+    "Error:Please try again later.":"Ошибка:Пожалуйста, попробуйте позже."
 
 
      }
@@ -107,7 +110,9 @@ translation:{
 "Satisfaction":"Satisfaction",
 "Guarante":"Guarante",
 "view":"view",
-"click":"click"
+"click":"click",
+"Thank! We will get back to you soon.":"Thank you! We will get back to you soon.",
+"Error:Please try again later.":"Error:Please try again later."
 
 
 }
