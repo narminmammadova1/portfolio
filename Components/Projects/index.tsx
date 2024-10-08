@@ -43,7 +43,7 @@ const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
          <div className="  lg:flex lg:gap-10 mt-10 px-10 lg:px-0  lg:justify-around">
       
 {projectsData.map((project)=>(
-   <animated.div key={project.id} style={getSpringStyles(project.id)} className="w-full mb-10 lg:w-1/3 border-none  relative h-[150px] lg:h-[250px] flex-col justify-between rounded-lg overflow-hidden"
+   <animated.div key={project.id} style={getSpringStyles(project.id)} className="w-full  mb-10 lg:w-1/3 border-none  relative h-[150px] lg:h-[250px] flex-col jus rounded-lg overflow-hidden"
    
    onMouseEnter={()=>setHoveredId(project.id)}
    onMouseLeave={()=>setHoveredId(null)}
@@ -55,7 +55,8 @@ const { getSpringStyles, setHoveredId,hoveredId} = useAnimatedStyles();
           className='  min-w-full h-[150px] lg:h-[250px]'/>
        
           
-          {hoveredId===project.id && (    <a href={project.link} target='_blank' rel='noopener norefferer'>      <button className='px-6 m-4 text-white absolute bottom-2  border-2 border-purplemain rounded-md'>{t("view")}</button>  </a>
+          {hoveredId===project.id && (    <a href={project.link} target='_blank' rel='noopener norefferer'>     
+             <button className='  px-6 m-4 text-white absolute bottom-2  border-2 border-purplemain rounded-md'>{t("view")}</button>  </a>
 )}
         
          
