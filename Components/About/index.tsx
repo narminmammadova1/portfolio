@@ -54,8 +54,8 @@ const About = () => {
           </div>
     </div>
     <div className="w-1/2 flex items-start justify-center">
-    <div className="w-[200px] h-[200px] flex  shadow-shadowCustom rounded-full items-center justify-center bg-black">
-<Image className=' w-[150px] h-[200px]  self-center rounded-full object-cover' width={200} height={200} src="/png/me.png" alt=""></Image>
+    <div className="w-[200px] h-[200px] flex  shadow-shadowCustom rounded-full  justify-center bg-black">
+<Image className=' w-[170px] h-[200px]   rounded-full object-cover' width={200} height={200} src="/png/me.png" alt=""></Image>
     </div>
     </div>
    </section>
