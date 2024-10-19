@@ -30,18 +30,8 @@ export const useAnimatedStyles = () => {
     })
   
   
-const  projectsAnimated=useSpring({
-  from:{
-    count:0
-  },
-  to:{
-    count:100
-  },
-  config:{duration:2000},
-   reset: true,
-})
 
  
 
-  return { getSpringStyles, setHoveredId,hoveredId,  ColorChangeText, projectsAnimated};
+  return { getSpringStyles, setHoveredId,hoveredId,  ColorChangeText};
 };

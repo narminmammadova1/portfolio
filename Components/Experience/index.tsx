@@ -8,7 +8,6 @@ import AnimatedSection3 from '../AnimatedSection/AnimatedSection3'
 const Experience = () => {
 
   const {t,i18n}=useTranslation()
-const { projectsAnimated}=useAnimatedStyles()
   
 useEffect(() => {
   const storedLang = localStorage.getItem('language');
@@ -33,9 +32,7 @@ useEffect(() => {
       </AnimatedSection2>
       <p className="text-2xl lg:text-6xl">+</p>
     <p  className="text-base lg:text-2xl" >{t("Projects")}</p></div>
-    {/* <div  className="flex items-center "> 
-      <p  className="text-6xl">60k+</p>
-    <p  className=" text-2xl">Lines of <br/> Code</p></div> */}
+   
     <div  className="lg:flex text-center gap-2 lg:items-center ">
       <AnimatedSection3>
        <p></p>
