@@ -20,14 +20,21 @@ const projectsData=[{
 },
 {
   id:2,
-  image:"/getgifs4.jpg",
-  link:"https://narminmammadova1.github.io/getGif/"
+  image:"/w1.jpg",
+  link:"https://weather-nu-navy-26.vercel.app/"
 },
+
 {
   id:3,
   image:"/Lemonlogo.svg",
   link:"https://little-lemon-two-blush.vercel.app/"
-}
+},
+{
+  id:4,
+  image:"/getgifs4.jpg",
+  link:"https://narminmammadova1.github.io/getGif/"
+},
+
 ]
 
 

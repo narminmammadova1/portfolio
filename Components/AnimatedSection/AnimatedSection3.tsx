@@ -10,8 +10,7 @@ const AnimatedSection3: React.FC<AnimatedSectionProps> = ({ children }) => {
 
   const projectsAnimated = useSpring({
     from: { count: 0 },
-    to: { count: inView ? 100 : 1 }, // Görünürse 100, değilse 0
-    config: { duration: 2000 },
+    to: { count: inView ? 100 : 1 }, 
     reset: true,
   });
 
