@@ -8,7 +8,7 @@ import { useSpring } from "react-spring";
 export const useAnimatedStyles = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const getSpringStyles = (id:number) => {
+  const getSpringStyles = (id:string  |null |number) => {
     const isHovered = hoveredId === id;
     return useSpring({
       transform: isHovered ? 'scale(1.1)' : 'scale(1)',
