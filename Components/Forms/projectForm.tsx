@@ -9,10 +9,10 @@ const ProjectForm = () => {
   });
 
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e:React.FormEvent) => {
     e.preventDefault();
 
-    const uniqueId=new Date().getTime().toString()
+    // const uniqueId=new Date().getTime().toString()
  
     
     setProjectData({

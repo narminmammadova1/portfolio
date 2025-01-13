@@ -1,7 +1,5 @@
-import { useAnimatedStyles } from '@/hooks/useAnimated'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import {animated} from "react-spring"
 import AnimatedSection2 from '../AnimatedSection/AnimatedSection2'
 import AnimatedSection1 from '../AnimatedSection/AnimatedSection1'
 import AnimatedSection3 from '../AnimatedSection/AnimatedSection3'

@@ -1,15 +1,10 @@
 import { useAnimatedStyles } from '@/hooks/useAnimated'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import {animated} from "react-spring"
 
 
-interface Project {
-  id: string | null;
-  image: string;
-  link: string;
-}
 
 
 const Projects = () => {

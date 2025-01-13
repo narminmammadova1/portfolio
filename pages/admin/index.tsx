@@ -2,7 +2,6 @@ import AboutMeForm from '@/Components/Forms/aboutmeForm'
 import CertificateForm from '@/Components/Forms/certificateForm'
 import ProjectForm from '@/Components/Forms/projectForm'
 import SkillForm from '@/Components/Forms/skillForm'
-import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 const Admin = () => {
 
