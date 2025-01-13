@@ -4,7 +4,6 @@ import ProjectForm from '@/Components/Forms/projectForm'
 import SkillForm from '@/Components/Forms/skillForm'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-// import { collection, addDoc,getDocs } from "firebase/firestore";
 const Admin = () => {
 
   type FormType="project" |"skill" |"certification" |"aboutme" | null
@@ -17,14 +16,6 @@ const handleButtonClick=(form:FormType)=>{
 }
 
 
-// const addProject=async (projectData)=>{
-// try{
-//   const docRef=await addDoc(collection(db,"projects"),projectData)
-//   console.log("Project added, ID: ", docRef.id);
-
-// }catch(err){console.log(err);
-// }
-// }
 
 
 

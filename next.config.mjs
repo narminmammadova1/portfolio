@@ -6,12 +6,3 @@ const nextConfig = {
 export default nextConfig;
 
 
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   images: {
-//     domains: ['\fakepath', 'anotherdomain.com'],
-//   },
-// };
-
-// export default nextConfig;
