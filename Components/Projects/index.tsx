@@ -45,6 +45,12 @@ const projectsData=[{
   image:"/getgifs4.jpg",
   link:"https://narminmammadova1.github.io/getGif/"
 },
+{
+  id:5,
+  image:"/mycanvas.jpg",
+  link:"https://canvas-tau-taupe.vercel.app/"
+},
+
 
 ]
 
@@ -64,7 +70,7 @@ return (
        <div className="  lg:flex lg:gap-10 mt-10 px-10 lg:px-0  lg:justify-around">
     
 {projectsData.map((project)=>(
- <animated.div key={project.id} style={getSpringStyles(project.id)} className="w-full  mb-10 lg:w-1/3 border-none  relative h-[150px] lg:h-[250px] flex-col jus rounded-lg overflow-hidden"
+ <animated.div key={project.id} style={getSpringStyles(project.id)} className="w-3/4 mx-auto  mb-10 lg:w-1/3 border-none  relative h-[150px] lg:h-[150px] flex-col jus rounded-lg overflow-hidden"
  
  onMouseEnter={()=>setHoveredId(project.id)}
  onMouseLeave={()=>setHoveredId(null)}
@@ -73,7 +79,7 @@ return (
        <Image src={project.image} width={250} 
         height={200} alt="" 
         // objectFit='cover'
-        className='  min-w-full h-[150px] lg:h-[250px]'/>
+        className=' min-w-full h-[150px] lg:h-[150px]'/>
      
         
         {hoveredId===project.id && (    <a href={project.link} target='_blank' rel='noopener norefferer'>     
@@ -97,6 +103,4 @@ return (
 }
 
 export default Projects
-
-
 
