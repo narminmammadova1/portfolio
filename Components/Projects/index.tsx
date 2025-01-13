@@ -20,7 +20,7 @@ const {t,i18n}=useTranslation()
 useEffect(() => {
   const storedLang = localStorage.getItem('language');
   if (storedLang) {
-    i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+    i18n.changeLanguage(storedLang); 
   }
 }, [i18n]);
 
