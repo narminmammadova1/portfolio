@@ -27,6 +27,11 @@ const certificatesData:CertificateProps[]= [
     title: 'EACAMP Modern Fronted Certificate',
     link: 'https://school.eacampschool.com/mod/customcert/verify_certificate.php?contextid=6262&code=AufxQ9a7IG&qrcode=1',
   },
+  {
+    id: 5,
+    title: 'Intern Intelligence Frontend Developer',
+    link: 'https://school.eacampschool.com/mod/customcert/verify_certificate.php?contextid=6262&code=AufxQ9a7IG&qrcode=1',
+  },
 ];
 
 const Certificates = () => {
@@ -37,7 +42,7 @@ const Certificates = () => {
   useEffect(() => {
     const storedLang = localStorage.getItem('language');
     if (storedLang) {
-      i18n.changeLanguage(storedLang); // LocalStorage'dan dil al
+      i18n.changeLanguage(storedLang); 
     }
   }, [i18n]);
 

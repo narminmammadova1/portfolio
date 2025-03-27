@@ -85,7 +85,7 @@ catch(err){console.log(err);
     <FaInstagramSquare className='text-4xl text-purplemain' />
       </button>
       </a> */}
-      <a href="https://github.com/narminmammadova1">
+      <a target='blank' href="https://github.com/narminmammadova1">
             <button className='mb-8 w-16 h-16 lg:w-20 lg:h-20 border cursor-pointer  rounded-full  flex items-center justify-center border-gray-700 shadow-shadowCustom'>
             <FaGithub  className='text-4xl  text-purplemain'  />
               </button>
@@ -96,7 +96,7 @@ catch(err){console.log(err);
               </button>
               </a>
               <a href="">
-            <button className='mb-8 w-16 h-16 lg:w-20 lg:h-20 border cursor-pointer  rounded-full  flex items-center justify-center border-gray-700 shadow-shadowCustom'>
+            <button  className='mb-8 w-16 h-16 lg:w-20 lg:h-20 border cursor-pointer  rounded-full  flex items-center justify-center border-gray-700 shadow-shadowCustom'>
             <TbBrandFiverr  className='text-4xl  text-purplemain'  />
 
               </button>
