@@ -37,7 +37,7 @@ const About = () => {
 
             </a>
 
-            <a href="/CV/Narmin.Mammadova.Frontend.pdf"
+            <a href="/CV/narmin_mammadova_cv.pdf"
             target='_blank'
             rel='noopener norefferer'
 
