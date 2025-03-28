@@ -81,7 +81,7 @@ const Certificates = () => {
               <div key={certificate.id}  className="p-4 ">
  <animated.div 
                 style={getSpringStyles(certificate.id)}
-                className=' px-4 flex-col w-[80%] h-[80px] lg:w-[200px] lg:h-[100px] mb-10 lg:mb-0 flex items-center cursor-pointer text-center py-2 shadow-shadowCustom rounded-md border-purplemain'
+                className='px-2 lg:px-4 flex-col w-[90%] h-[90px] lg:w-[200px] lg:h-[100px] mb-10 lg:mb-0 flex items-center cursor-pointer text-center py-2 shadow-shadowCustom rounded-md border-purplemain'
                 onMouseEnter={() => setHoveredId(certificate.id)}
                 onMouseLeave={() => setHoveredId(null)}
              
