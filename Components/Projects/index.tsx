@@ -73,7 +73,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute  bottom-0 w-full text-center text-xl bg-purplemain text-white px-4 py-1 "
+                    className="absolute text-[14px] md:text-base  bottom-0 w-full text-center text-xl bg-purplemain  text-white px-4 py-1 "
                   >
                     <div className="flex gap-4 justify-center"><div>   {t("View")} </div> <div> "{project.name}" </div>
                        </div>
